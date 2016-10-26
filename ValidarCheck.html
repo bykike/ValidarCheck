@@ -1,0 +1,41 @@
+<html>
+    
+    <head>
+    <style>
+        
+    </style>
+    </head>
+    <body>
+            <script src="https://code.jquery.com/jquery-2.2.2.min.js"></script>
+            <form action="">
+                <div>
+                    <p>Correo: </p>
+                    <input type="email" name="correo" id="correo">
+                </div>
+                <div>
+                    <p>Telefono: </p>
+                    <input type="text" name="teléfono" id="teléfono">
+                </div>
+                <div>
+                    <p>Aceptar condiciones: </p>
+                    <input type="checkbox" name="aceptar" id="aceptar">
+                </div>
+                <button type="submit" id="submit">Enviar Formulario </button>
+            </form>
+        
+        
+            <script type="text/javascript">
+                $(document).ready(function() {
+                $("#submit").on("click", function() {
+                var condiciones = $("#aceptar").is(":checked");
+                if (!condiciones) {
+                    alert("Debe aceptar las condiciones");
+                    event.preventDefault();
+                        }
+                    });
+                });
+            </script>
+
+    </body>
+
+</html>
